@@ -34,7 +34,7 @@ Sistema backend REST para gerenciamento de uma clínica médica, desenvolvido co
 
 ```bash
 git clone <url-do-repositorio>
-cd clinica-api
+cd clinica
 ```
 
 ### 2. Configure o arquivo de variáveis de ambiente
@@ -50,7 +50,7 @@ Edite o `.env` com suas configurações (especialmente `JWT_SECRET` e `DB_PASS`)
 ### 3. Suba o ambiente completo
 
 ```bash
-docker compose up --build
+ sudo docker compose up --build
 ```
 
 O sistema estará disponível em: **http://localhost**
@@ -64,13 +64,13 @@ As migrations criam/atualizam todas as tabelas automaticamente.
 ### Aguarde o banco subir e execute:
 
 ```bash
-docker compose exec app node command.js migrate
+sudo docker compose exec app node command.js migrate
 ```
 
 Para recriar o banco do zero (apaga todos os dados):
 
 ```bash
-docker compose exec app node command.js migrate:fresh
+sudo docker compose exec app node command.js migrate:fresh
 ```
 
 ---
@@ -190,11 +190,11 @@ docker network inspect clinica_backend
 Para parar e remover containers (mantém volume do banco):
 
 ```bash
-docker compose down
+sudo docker compose down
 ```
 
 Para remover tudo incluindo dados do banco:
 
 ```bash
-docker compose down -v
+sudo docker compose down -v
 ```
