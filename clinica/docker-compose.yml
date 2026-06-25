@@ -33,7 +33,23 @@ services:
     networks:
       - backend
     restart: unless-stopped
-    # Node.js NÃO expõe porta para o host — acesso apenas via nginx
+
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clinica_migrate
+    env_file: .env
+    environment:
+      DB_HOST: db
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+    command: ["node", "command.js", "migrate"]
+    profiles:
+      - tools
 
   nginx:
     image: nginx:alpine
