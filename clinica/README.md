@@ -48,6 +48,9 @@ npm install
 
 > Isso instala localmente os pacotes do `package.json` (Express, Sequelize, bcrypt, JWT, etc). Necessário mesmo rodando com Docker, pois o Dockerfile copia o `node_modules` gerado.
 
+### 2.1 A partir desse passo é obrigado a usar o WSL no CMD
+
+
 ### 3. Configure o arquivo de variáveis de ambiente
 
 ```bash
