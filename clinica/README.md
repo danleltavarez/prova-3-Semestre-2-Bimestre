@@ -265,6 +265,11 @@ sudo docker compose down -v
 ```
 
 
-## video que pode ajudar
+## videos das evidências que podem ajudar
 
 https://medal.tv/games/screen-capture/clips/mYTmu0PoK69hk3Ux_?invite=cr-MSw2d3QsNjE0ODMxMDY4
+
+
+## teste de conectividade
+
+https://medal.tv/games/screen-capture/clips/n0xgDVy53NTqDY8a3?invite=cr-MSwycGksNjE0ODMxMDY4
